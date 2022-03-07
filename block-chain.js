@@ -57,4 +57,5 @@ class BlockChain {
     }
 }
 
-module.exports = BlockChain;
+module.exports.BlockChain = BlockChain;
+module.exports.Block = Block;

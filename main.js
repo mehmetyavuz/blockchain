@@ -1,6 +1,6 @@
 const BlockChain = require('./block-chain');
 
-let myCoin = new BlockChain();
+let myCoin = new BlockChain.BlockChain();
 var balances = [];
 
 /*
@@ -35,9 +35,11 @@ function init(initialBalances, transactions, blockSize) {
     returns the account balance of a specific account.
  */
 function getAccountBalance(accountIndex) {
-    console.log(balances[accountIndex]);
     return balances[accountIndex];
 }
 
 init([100, 100, 500], [[0, 1, 50], [1, 2, 80], [2, 0, 450]], 2);
 getAccountBalance(1);
+
+module.exports.init = init
+module.exports.getAccountBalance = getAccountBalance;
